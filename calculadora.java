@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+public class calculadora {
+    public static void main(String[] args) {
+        
+
+        Scanner num = new Scanner(System.in);
+        System.out.println("Ingresa dos numeros");
+        int num1 = num.nextInt();
+        int num2 = num.nextInt();
+        num.close();
+
+        int suma = num1 + num2;
+        int resta = num1 - num2;
+        int multi = num1 * num2;
+        int div = num1 / num2;
+        
+        System.out.println("La suma de " +num1 + " y " +num2 + " da " + suma + ", su sustracción da " + resta + ", su multiplicación da " + multi + " y su division da " + div + ". :) ");
+    };
+};
