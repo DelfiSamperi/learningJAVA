@@ -1,4 +1,4 @@
-package abstraccionInterfaces.biblioteca;
+package POOavanzado.biblioteca;
 /*
  * Diseña una clase abstracta "ItemBiblioteca" que contenga 
  * métodos abstractos como "prestar()", "devolver()" y "calcularMultas()".

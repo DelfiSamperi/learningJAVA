@@ -1,4 +1,4 @@
-package abstraccionInterfaces;
+package POOavanzado.geometriaAbstracta;
 
 public class Triangulo extends Figura {
     double lado;

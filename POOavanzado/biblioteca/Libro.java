@@ -1,18 +1,5 @@
-package abstraccionInterfaces.biblioteca;
-/*
- 
-Crea la clase “Biblioteca” que contenga un arreglo de objetos
- “Libro” para mantener un catálogo de libros disponibles en 
- la biblioteca. La biblioteca también debe tener un método 
- para agregar libros al catálogo.
+package POOavanzado.biblioteca;
 
-Crear una instancia de la clase Biblioteca y agregar varios 
-libros al catálogo 
-
-Implementa un menú por consola que permite al usuario agregar
-libros a la biblioteca y mostrar la información de los libros
-en el catálogo.
- */
 public class Libro extends itemBiblioteca {
     /*
     * Agregar los atributos “titulo”, “autor” y “numeroDePaginas”
@@ -26,18 +13,21 @@ public class Libro extends itemBiblioteca {
     private String titulo;
     private String autor;
     private int numPag;
+    private boolean prestado;
 
     //constructor
-    public Libro(String titulo, String autor,int numPag) {
+    public Libro(String titulo, String autor,int numPag, boolean prestado) {
         this.titulo = titulo;
         this.autor = autor;
         this.numPag = numPag;
+        this.prestado = prestado;
     };
 
     public void mostrarInformacion() {
         System.out.println("Título: " + titulo);
         System.out.println("Autor: " + autor);
         System.out.println("Páginas: " + numPag);
+        System.out.println("Prestado: " + prestado);
     };
 
     @Override

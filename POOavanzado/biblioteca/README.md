@@ -1,6 +1,5 @@
-Actividad: Gestión de biblioteca
+## Actividad: Gestión de biblioteca
 En esta actividad, se requiere el diseño de un sistema de gestión de biblioteca que emplee clases abstractas e interfaces para representar libros, revistas y películas. Para lograrlo, sigue estos pasos:
-
 
 Diseña una clase abstracta "ItemBiblioteca" que contenga métodos abstractos como "prestar()", "devolver()" y "calcularMultas()".
 
@@ -30,7 +29,8 @@ Una implementación concreta del método calcularMultas(). Piensa si necesitas i
 
 Considerando tu experiencia previa con la gestión de la clase "Revista", ahora te invito a completar la implementación necesaria para la clase "Película".
 
-Actividad: Desarrollo funcionalidades - Primera Parte 
+### Actividad: Desarrollo funcionalidades - Primera Parte 
+
 Debes ampliar el sistema para poder almacenar libros dentro de la biblioteca. Para esto deberás:
 
 Agregar los atributos “titulo”, “autor” y “numeroDePaginas” a la clase “Libro”. Además, implementa un método “mostrarInformación()” que muestre la información del libro en consola. En este caso, solo hay 1  ejemplar por título, por lo que no debe existir un atributo que controle la cantidad de ejemplares. 
@@ -39,10 +39,10 @@ Crea la clase “Biblioteca” que contenga un arreglo de objetos “Libro” pa
 
 Crear una instancia de la clase Biblioteca y agregar varios libros al catálogo 
 
-
 Implementa un menú por consola que permite al usuario agregar libros a la biblioteca y mostrar la información de los libros en el catálogo.
 
-Actividad: Desarrollo funcionalidades  - SegundaParte 
+### Actividad: Desarrollo funcionalidades  - SegundaParte 
+
 Debes seguir ampliando el sistema para permitir el préstamo y la devolución de libros. Para esto deberás:
 
 Agrega el atributo “prestado” a la clase “Libro” para rastrear si un libro está prestado o no.
