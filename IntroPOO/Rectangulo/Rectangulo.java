@@ -55,7 +55,7 @@ public class Rectangulo {
 
     public static int getContadorRectangulos() {
         return contadorRectangulos;
-    }
+    };
 
     public void imprimirArea() {
         System.out.println("El area del rectangulo es: " + area());
@@ -65,6 +65,7 @@ public class Rectangulo {
         System.out.println("Perimetro del rectangulo es: " + perimetro());
     };
 
+    /*
     public static void main(String[] args) {
         Rectangulo rectangulo1 = new Rectangulo(5,8);
         rectangulo1.imprimirArea();
@@ -78,5 +79,5 @@ public class Rectangulo {
         rectangulo3.imprimirArea();
         rectangulo3.imprimirPerimetro();
     }
-    
+    */
 };
