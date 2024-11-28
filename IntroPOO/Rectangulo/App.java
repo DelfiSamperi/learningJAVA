@@ -40,8 +40,7 @@ public class App {
                     // entre [] indico el indice donde se almacena rectangulo1
                     rectangulos[Rectangulo.getContadorRectangulos() - 1] = nuevoRectangulo;
 
-                    System.out
-                            .println("Almacenado en el indice " + rectangulos[Rectangulo.getContadorRectangulos() - 1]);
+                    System.out.println("Almacenado en el indice " + (Rectangulo.getContadorRectangulos() - 1));
                     break;
 
                 case 2:
