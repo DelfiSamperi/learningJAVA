@@ -7,9 +7,19 @@ import java.util.Scanner;
 */
 
 public class App {
+    //arreglo global para almacenar puntos
+    private static Punto[] puntos;
+
     public static void main(String[] args) {
         Scanner miScanner = new Scanner(System.in);
-        Punto[] puntos = new Punto[5];
+        //inicializo el arreglo
+        puntos = new Punto[3];
+        // Crear y almacenar puntos
+        /* DE PRUEBA
+        puntos[0] = new Punto(3, 4);  
+        puntos[1] = new Punto(6, 8); 
+        puntos[2] = new Punto(9, 12); 
+        */
         int option;
         do {
             System.out.println("\nMenú:");
@@ -36,17 +46,27 @@ public class App {
                     int index = miScanner.nextInt();
 
                     if (index >= 0 && index < Punto.getCantidadPuntos()) {
-                        System.out.println("entro al if pero no anda");
-                        //System.out.println("Distancia: " + (puntos[index].distanciaDesdeOrigen()) );
+                        //System.out.println("entro al if pero no anda");
+                        System.out.println("Distancia: " + (puntos[index].distanciaDesdeOrigen()) );
                     } else {
                         System.out.println("Ingrese un índice válido.");
                     }
                     break;
                 case 3:
-                    System.out.println("calcula la distancia entre dos puntos");
+                    System.out.println("Ingrese el indice del primer punto a calcular: ");
+                    int index1 = miScanner.nextInt();
+                    System.out.println("Ingrese el indice del segundo punto a calcular: ");
+                    int index2 = miScanner.nextInt();
+                    if(index1 >= 0 && index1 < Punto.getCantidadPuntos() && index2 >= 0 && index2 < Punto.getCantidadPuntos() && index1 != index2) {
+                        double distancia = Punto.calcularDistancia(puntos[index1], puntos[index2]);
+                        System.out.println("Distancia entre los dos puntos: " + distancia);
+                    } else {
+                        System.out.println("Ingrese indices validos.");
+                    }
                     break;
                 case 4:
-                    System.out.println("muestra si los tres puntos seleccionados estan alineados");
+                boolean alineados = Punto.estanAlineados(puntos[0], puntos[1], puntos[2]);
+                    System.out.println("Puntos alineados: " + alineados);
                     break;
                 case 5:
                     miScanner.close();

@@ -16,29 +16,12 @@ En la clase ejecutable, declara una variable global como un arreglo de objetos '
 */
 
 public class Punto {
-    //atributos
+    // atributos
     private double x;
     private double y;
     public static int cantidadPuntos = 0;
 
-    //Getters & Setters
-    public double getX() {
-        return x;
-    }
-    public void setX(double x) {
-        this.x = x;
-    }
-    public double getY() {
-        return y;
-    }
-    public void setY(double y) {
-        this.y = y;
-    }
-    public static int getCantidadPuntos() {
-        return cantidadPuntos;
-    };
-
-    //Constructor
+    // Constructor
     public Punto(double x, double y) {
         this.x = x;
         this.y = y;
@@ -46,16 +29,49 @@ public class Punto {
         System.out.println("Punto creado en las coordenandas " + this.x + " - " + this.y);
     }
 
-    public void distanciaDesdeOrigen() {
-        System.out.println("El punto se encuentra a " + this.x + " en el eje X y " + this.y + " en el eje Y.");
+    // Getters & Setters
+    public double getX() {
+        return x;
     }
 
-    public static void calcularDistancia() {
-
+    public void setX(double x) {
+        this.x = x;
     }
 
-    public static void estanAlineados() {
-
+    public double getY() {
+        return y;
     }
-    
+
+    public void setY(double y) {
+        this.y = y;
+    }
+
+    public static int getCantidadPuntos() {
+        return cantidadPuntos;
+    };
+
+    // Metodo de instancia para calcular distancia desde origen
+    public double distanciaDesdeOrigen() {
+        // System.out.println("El punto se encuentra a " + this.x + " en el eje X y " +
+        // this.y + " en el eje Y.");
+        // distancia desde origen usando teorema de pitagoras
+        return Math.sqrt(x * x + y * y);
+    }
+
+    // metodo estatico para calcular distancia entre dos puntos
+    public static double calcularDistancia(Punto p1, Punto p2) {
+        double deltaX = p2.getX() - p1.getX();
+        double deltaY = p2.getY() - p1.getY();
+        return Math.sqrt(deltaX * deltaX + deltaY * deltaY);
+    }
+
+    // metodo estatico para verificar si tres puntos estan alineados
+    public static boolean estanAlineados(Punto p1, Punto p2, Punto p3) {
+        // Fórmula: (y2-y1)/(x2-x1) == (y3-y2)/(x3-x2)
+        // Para evitar divisiones (x2-x1)*(y3-y2) == (y2-y1)*(x3-x2)
+        double diferencia = (p2.getX() - p1.getX()) * (p3.getY() - p2.getY()) -
+                (p2.getY() - p1.getY()) * (p3.getX() - p2.getX());
+        return Math.abs(diferencia) < 1e-9; // Usamos tolerancia para evitar errores de punto flotante
+    }
+
 }
